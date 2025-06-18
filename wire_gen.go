@@ -7,7 +7,12 @@
 package main
 
 import (
+	"github.com/google/wire"
+	"supply-chain-mall/config"
 	"supply-chain-mall/controller"
+	"supply-chain-mall/dao"
+	"supply-chain-mall/pkg/cache"
+	"supply-chain-mall/pkg/client"
 	"supply-chain-mall/pkg/core"
 	"supply-chain-mall/svc"
 )
@@ -16,7 +21,18 @@ import (
 
 func NewInjector() (*core.AppProvider, error) {
 	engine := controller.NewGinServer()
-	productService := &svc.ProductService{}
+	configConfig, err := config.Load()
+	if err != nil {
+		return nil, err
+	}
+	db := client.NewMySQLClient(configConfig)
+	productRepo := dao.NewProductRepo(db)
+	redisClient := client.NewRedisClient(configConfig)
+	taskCache := cache.NewTaskCache(redisClient)
+	productService := &svc.ProductService{
+		UserRepo: productRepo,
+		Cache:    taskCache,
+	}
 	product := &controller.Product{
 		ProductSvc: productService,
 	}
@@ -29,3 +45,7 @@ func NewInjector() (*core.AppProvider, error) {
 	}
 	return appProvider, nil
 }
+
+// wire.go:
+
+var ProviderSet = wire.NewSet(config.ProviderSet, controller.ProviderSet, core.ProviderSet, client.ProviderSet, dao.ProviderSet)

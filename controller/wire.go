@@ -1,5 +1,3 @@
-//go:build wireinject
-
 package controller
 
 import (

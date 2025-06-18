@@ -2,8 +2,6 @@
 package config
 
 import (
-	"fmt"
-
 	"github.com/spf13/viper"
 )
 
@@ -13,7 +11,7 @@ type Config struct {
 	}
 	DB struct {
 		Host     string
-		Port     string
+		Port     int
 		User     string
 		Password string
 		Name     string
@@ -74,10 +72,4 @@ func Load() (*Config, error) {
 	}
 
 	return &config, nil
-}
-
-// GetMySQLDSN 返回MySQL数据源名称
-func (c *Config) GetMySQLDSN() string {
-	return fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		c.DB.User, c.DB.Password, c.DB.Host, c.DB.Port, c.DB.Name)
 }

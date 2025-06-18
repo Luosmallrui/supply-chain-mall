@@ -11,7 +11,7 @@ type Product struct {
 }
 
 func (p *Product) RegisterRouter(r gin.IRouter) {
-	product := r.Group("/")
+	product := r.Group("/product")
 	product.GET("/", p.FindAllProducts)
 
 }
