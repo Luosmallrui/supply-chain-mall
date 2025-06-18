@@ -30,8 +30,8 @@ func NewInjector() (*core.AppProvider, error) {
 	redisClient := client.NewRedisClient(configConfig)
 	taskCache := cache.NewTaskCache(redisClient)
 	productService := &svc.ProductService{
-		UserRepo: productRepo,
-		Cache:    taskCache,
+		ProductRepo: productRepo,
+		Cache:       taskCache,
 	}
 	product := &controller.Product{
 		ProductSvc: productService,

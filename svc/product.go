@@ -1,32 +1,32 @@
 package svc
 
 import (
+	"context"
 	"supply-chain-mall/dao"
+	"supply-chain-mall/model"
 	"supply-chain-mall/pkg/cache"
-	"supply-chain-mall/types"
-	"time"
 )
 
 var _ IProductService = (*ProductService)(nil)
 
 type ProductService struct {
-	UserRepo *dao.ProductRepo
-	Cache    *cache.TaskCache
+	ProductRepo *dao.ProductRepo
+	Cache       *cache.TaskCache
 }
 
 type IProductService interface {
 	CreateProduct() error
+	FindAllProduct(ctx context.Context) ([]*model.Product, error)
 }
 
 func (s *ProductService) CreateProduct() error {
-	s.UserRepo.Create(&types.User{
-		ID:        0,
-		Username:  "",
-		Nickname:  "",
-		Email:     "",
-		Password:  "",
-		CreatedAt: time.Time{},
-		UpdatedAt: time.Time{},
-	})
 	return nil
+}
+
+func (s *ProductService) FindAllProduct(ctx context.Context) ([]*model.Product, error) {
+	products, err := s.ProductRepo.FindAll(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return products, err
 }

@@ -29,7 +29,7 @@ func NewMySQLClient(config *config.Config) *gorm.DB {
 			config.DB.Password,
 			config.DB.Host,
 			config.DB.Port,
-			"tdl",
+			config.DB.Name,
 		),
 		DisableDatetimePrecision:  true,
 		DontSupportRenameIndex:    true,

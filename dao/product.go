@@ -1,31 +1,34 @@
 package dao
 
 import (
+	"context"
 	"gorm.io/gorm"
+	"supply-chain-mall/model"
 	"supply-chain-mall/types"
 )
 
 type ProductRepo struct {
-	db *gorm.DB
+	Repo[model.Product]
 }
 
 func NewProductRepo(db *gorm.DB) *ProductRepo {
-	return &ProductRepo{db: db}
+	return &ProductRepo{Repo: NewRepo[model.Product](db)}
 }
 
 // Create 创建商品
-func (r *ProductRepo) Create(user *types.User) error {
-	return r.db.Create(user).Error
+func (r *ProductRepo) Create(ctx context.Context, p *types.Product) error {
+	return r.Repo.Create(ctx, &model.Product{
+		Name:          p.Name,
+		Price:         p.Price,
+		OriginalPrice: float64(p.OriginalPrice),
+		Image:         p.Image,
+		Brand:         p.Brand,
+		BrandSubtitle: p.BrandSubtitle,
+	})
 }
 
-// Update 更新商品
-func (r *ProductRepo) Update(user *types.User) error {
-	return r.db.Save(user).Error
-}
-
-// FindByID 通过ID查找场频
-func (r *ProductRepo) FindByID(id uint) (*types.User, error) {
-	var user types.User
-	err := r.db.Where("id = ?", id).First(&user).Error
-	return &user, err
+func (r *ProductRepo) FindAll(ctx context.Context) ([]*model.Product, error) {
+	return r.Repo.FindAll(ctx, func(db *gorm.DB) {
+		db.Where(&model.Product{})
+	})
 }

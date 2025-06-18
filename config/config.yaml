@@ -7,7 +7,7 @@ db:
   port: 3306
   user: root
   password: 123456
-  name: tdl
+  name: mall
 
 redis:
   host: localhost

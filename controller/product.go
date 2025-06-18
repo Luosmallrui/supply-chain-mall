@@ -12,11 +12,13 @@ type Product struct {
 
 func (p *Product) RegisterRouter(r gin.IRouter) {
 	product := r.Group("/product")
-	product.GET("/", p.FindAllProducts)
+	product.GET("", ctx.HandlerFunc(p.FindAllProducts))
 
 }
-func (p *Product) FindAllProducts(c *gin.Context) {
-	p.ProductSvc.CreateProduct()
-
-	ctx.Error(c, 400, "failed")
+func (p *Product) FindAllProducts(c *gin.Context) error {
+	resp, err := p.ProductSvc.FindAllProduct(c)
+	if err != nil {
+		return ctx.Error(c, 500, err.Error())
+	}
+	return ctx.Success(c, resp)
 }

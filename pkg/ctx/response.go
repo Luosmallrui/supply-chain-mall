@@ -13,15 +13,16 @@ type Response struct {
 	Meta    any         `json:"metadata,omitempty"`
 }
 
-func Success(c *gin.Context, data interface{}) {
-	c.JSON(http.StatusOK, Response{
+func Success(c *gin.Context, data interface{}) error {
+	c.AbortWithStatusJSON(http.StatusOK, Response{
 		Code:    http.StatusOK,
 		Message: "success",
 		Data:    data,
 	})
+	return nil
 }
 
-func Error(c *gin.Context, code int, message string) {
+func Error(c *gin.Context, code int, message string) error {
 
 	resp := Response{
 		Code:    code,
@@ -33,7 +34,8 @@ func Error(c *gin.Context, code int, message string) {
 		resp.Data = ""
 	}
 
-	c.JSON(code, resp)
+	c.AbortWithStatusJSON(code, resp)
+	return nil
 }
 
 func initMeta() map[string]any {
@@ -45,4 +47,17 @@ func initMeta() map[string]any {
 	}
 
 	return meta
+}
+
+func HandlerFunc(fn func(ctx *gin.Context) error) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		if err := fn(c); err != nil {
+			c.AbortWithStatusJSON(http.StatusInternalServerError, &Response{
+				Code:    http.StatusInternalServerError,
+				Message: err.Error(),
+				Meta:    initMeta(),
+			})
+			return
+		}
+	}
 }
