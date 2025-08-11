@@ -3,11 +3,11 @@ server:
   port: 3002
 
 db:
-  host: 0.0.0.0
+  host: 172.27.0.11
   port: 3306
   user: root
-  password: 123456
-  name: mall
+  password: Luoxiaorui0
+  name: fruit
 
 redis:
   host: localhost
