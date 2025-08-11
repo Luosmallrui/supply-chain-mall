@@ -1,0 +1,87 @@
+{
+  "id": "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+  "gender": [
+    "Kids"
+  ],
+  "images": [
+    "https://fruit-1306715736.cos.ap-chengdu.myqcloud.com/fruit433.jpg"
+  ],
+  "reviews": [
+    {
+      "id": "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+      "name": "Jayvion Simon",
+      "postedAt": "2025-08-11T07:41:45+00:00",
+      "comment": "The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.",
+      "isPurchased": true,
+      "rating": 4.2,
+      "avatarUrl": "https://api-dev-minimal-v610.pages.dev/assets/images/avatar/avatar-1.webp",
+      "helpful": 9911,
+      "attachments": []
+    }
+  ],
+  "publish": "draft",
+  "ratings": [
+    {
+      "name": "1 Star",
+      "starCount": 9911,
+      "reviewCount": 1947
+    },
+    {
+      "name": "2 Star",
+      "starCount": 1947,
+      "reviewCount": 9124
+    },
+    {
+      "name": "3 Star",
+      "starCount": 9124,
+      "reviewCount": 6984
+    },
+    {
+      "name": "4 Star",
+      "starCount": 6984,
+      "reviewCount": 8488
+    },
+    {
+      "name": "5 Star",
+      "starCount": 8488,
+      "reviewCount": 2034
+    }
+  ],
+  "category": "榴莲",
+  "available": 0,
+  "priceSale": 168,
+  "taxes": 10,
+  "quantity": 80,
+  "inventoryType": "out of stock",
+  "tags": [
+    "Technology",
+    "Health and Wellness",
+    "Travel",
+    "Finance",
+    "Education"
+  ],
+  "code": "38BEE270",
+  "description": "果体大，果壳黄，核小，有尾尖，刺较尖。肉多且甜，果肉呈金黄色，初尝有异味，续食清凉甜蜜，回味甚佳。",
+  "sku": "WW75K5210YW/SV",
+  "createdAt": "2025-08-11T07:41:45+00:00",
+  "name": "金枕榴莲一个（约4.5-5斤)",
+  "price": 158,
+  "coverUrl": "https://api-dev-minimal-v610.pages.dev/assets/images/m-product/product-1.webp",
+  "colors": [
+    "#FF4842",
+    "#1890FF"
+  ],
+  "totalRatings": 4.2,
+  "totalSold": 763,
+  "totalReviews": 1947,
+  "newLabel": {
+    "enabled": false,
+    "content": "NEW"
+  },
+  "saleLabel": {
+    "enabled": false,
+    "content": "SALE"
+  },
+  "sizes": "A级",
+  "subDescription": "果体大，果壳黄，核小，有尾尖，刺较尖。肉多且甜，果肉呈金黄色，初尝有异味，续食清凉甜蜜，回味甚佳。"
+}

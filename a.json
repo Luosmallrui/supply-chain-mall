@@ -1,0 +1,178 @@
+{
+  "products": [
+    {
+      "id": "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+      "gender": [
+        "Kids"
+      ],
+      "images": [
+        "https://fruit-1306715736.cos.ap-chengdu.myqcloud.com/fruit433.jpg"
+      ],
+      "reviews": [
+        {
+          "id": "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+          "name": "Jayvion Simon",
+          "postedAt": "2024-08-19T18:58:39+00:00",
+          "comment": "The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.",
+          "isPurchased": true,
+          "rating": 4.2,
+          "avatarUrl": "https://api-dev-minimal-v610.pages.dev/assets/images/avatar/avatar-1.webp",
+          "helpful": 9911,
+          "attachments": []
+        }
+      ],
+      "publish": "draft",
+      "ratings": [
+        {
+          "name": "1 Star",
+          "starCount": 9911,
+          "reviewCount": 1947
+        },
+        {
+          "name": "2 Star",
+          "starCount": 1947,
+          "reviewCount": 9124
+        },
+        {
+          "name": "3 Star",
+          "starCount": 9124,
+          "reviewCount": 6984
+        },
+        {
+          "name": "4 Star",
+          "starCount": 6984,
+          "reviewCount": 8488
+        },
+        {
+          "name": "5 Star",
+          "starCount": 8488,
+          "reviewCount": 2034
+        }
+      ],
+      "category": "榴莲",
+      "available": 100,
+      "priceSale": 168,
+      "taxes": 10,
+      "quantity": 120,
+      "inventoryType": "kg",
+      "tags": [
+        "Technology",
+        "Health and Wellness",
+        "Travel",
+        "Finance",
+        "Education"
+      ],
+      "code": "38BEE270",
+      "description": "\n<h6>Specifications</h6>\n<table>\n  <tbody>\n    <tr>\n      <td>Category</td>\n      <td>Mobile</td>\n    </tr>\n    <tr>\n      <td>Manufacturer</td>\n      <td>Apple</td>\n    </tr>\n    <tr>\n      <td>Warranty</td>\n      <td>12 Months</td>\n    </tr>\n    <tr>\n      <td>Serial number</td>\n      <td>358607726380311</td>\n    </tr>\n    <tr>\n      <td>Ships from</td>\n      <td>United States</td>\n    </tr>\n  </tbody>\n</table>\n\n<h6>Product details</h6>\n<ul>\n  <li>\n    <p>The foam sockliner feels soft and comfortable</p>\n  </li>\n  <li>\n    <p>Pull tab</p>\n  </li>\n  <li>\n    <p>Not intended for use as Personal Protective Equipment</p>\n  </li>\n  <li>\n    <p>Colour Shown: White/Black/Oxygen Purple/Action Grape</p>\n  </li>\n  <li>\n    <p>Style: 921826-109</p>\n  </li>\n  <li>\n    <p>Country/Region of Origin: China</p>\n  </li>\n</ul>\n<h6>Benefits</h6>\n<ul>\n  <li>\n    <p>Mesh and synthetic materials on the upper keep the fluid look of the OG while adding comfort</p>\n    and durability.\n  </li>\n  <li>\n    <p>Originally designed for performance running, the full-length Max Air unit adds soft, comfortable cushio</p>\n    ning underfoot.\n  </li>\n  <li>\n    <p>The foam midsole feels springy and soft.</p>\n  </li>\n  <li>\n    <p>The rubber outsole adds traction and durability.</p>\n  </li>\n</ul>\n<h6>Delivery and returns</h6>\n<p>Your order of $200 or more gets free standard delivery.</p>\n<ul>\n  <li>\n    <p>Standard delivered 4-5 Business Days</p>\n  </li>\n  <li>\n    <p>Express delivered 2-4 Business Days</p>\n  </li>\n</ul>\n<p>Orders are processed and delivered Monday-Friday (excluding public holidays)</p>\n\n",
+      "sku": "WW75K5210YW/SV",
+      "createdAt": "2024-08-19T18:58:39+00:00",
+      "name": "金枕榴莲一个（约4.5-5斤）",
+      "price": 158,
+      "coverUrl": "https://fruit-1306715736.cos.ap-chengdu.myqcloud.com/fruit433.jpg",
+      "colors": [
+        "#FF4842",
+        "#1890FF"
+      ],
+      "totalRatings": 4.2,
+      "totalSold": 763,
+      "totalReviews": 1947,
+      "newLabel": {
+        "enabled": false,
+        "content": "NEW"
+      },
+      "saleLabel": {
+        "enabled": false,
+        "content": "SALE"
+      },
+      "sizes":"A级",
+      "subDescription": "Featuring the original ripple design inspired by Japanese bullet trains, the Nike Air Max 97 lets you push your style full-speed ahead."
+    },
+    {
+      "id": "33",
+      "gender": [
+        "Kids"
+      ],
+      "images": [
+        "https://fruit-1306715736.cos.ap-chengdu.myqcloud.com/fruit44.jpg"
+      ],
+      "reviews": [
+        {
+          "id": "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+          "name": "Jayvion Simon",
+          "postedAt": "2025-08-11T07:41:45+00:00",
+          "comment": "The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.",
+          "isPurchased": true,
+          "rating": 4.2,
+          "avatarUrl": "https://api-dev-minimal-v610.pages.dev/assets/images/avatar/avatar-1.webp",
+          "helpful": 9911,
+          "attachments": []
+        }
+      ],
+      "publish": "draft",
+      "ratings": [
+        {
+          "name": "1 Star",
+          "starCount": 9911,
+          "reviewCount": 1947
+        },
+        {
+          "name": "2 Star",
+          "starCount": 1947,
+          "reviewCount": 9124
+        },
+        {
+          "name": "3 Star",
+          "starCount": 9124,
+          "reviewCount": 6984
+        },
+        {
+          "name": "4 Star",
+          "starCount": 6984,
+          "reviewCount": 8488
+        },
+        {
+          "name": "5 Star",
+          "starCount": 8488,
+          "reviewCount": 2034
+        }
+      ],
+      "category": "葡萄",
+      "available": 80,
+      "priceSale": 10,
+      "taxes": 10,
+      "quantity": 120,
+      "inventoryType": "kg",
+      "tags": [
+        "Technology",
+        "Health and Wellness",
+        "Travel",
+        "Finance",
+        "Education"
+      ],
+      "code": "38BEE270",
+      "description": "果体大，果壳黄，核小，有尾尖，刺较尖。肉多且甜，果肉呈金黄色，初尝有异味，续食清凉甜蜜，回味甚佳。",
+      "sku": "WW75K5210YW/SV",
+      "createdAt": "2025-08-11T07:41:45+00:00",
+      "name": "巨峰葡萄一份（约1斤）",
+      "price": 9.9,
+      "coverUrl": "https://fruit-1306715736.cos.ap-chengdu.myqcloud.com/fruit44.jpg",
+      "colors": [
+        "#FF4842",
+        "#1890FF"
+      ],
+      "totalRatings": 4.2,
+      "totalSold": 763,
+      "totalReviews": 1947,
+      "newLabel": {
+        "enabled": false,
+        "content": "NEW"
+      },
+      "saleLabel": {
+        "enabled": false,
+        "content": "SALE"
+      },
+      "sizes": "A级",
+      "subDescription": "果体大，果壳黄，核小，有尾尖，刺较尖。肉多且甜，果肉呈金黄色，初尝有异味，续食清凉甜蜜，回味甚佳。"
+    }
+  ]
+}
